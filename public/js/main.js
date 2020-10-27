@@ -11,8 +11,7 @@ $(document).ready(function () {
 
 function atualizaTempoInicial(tempo) {
   tempoInicial = tempo;
-  $('#timer').text(tempo);
-  
+  $("#timer").text(tempo);
 }
 
 function atualizaTamanhoFrase() {
@@ -33,9 +32,10 @@ function inicializaContadores() {
 }
 
 function inicializaTimer() {
-  var tempo = $("#timer").text();
+  
   campo.one("focus", function () {
     // função one funciona como o on mas apenas 1x, não fica escutando indefinidamente
+    var tempo = $("#timer").text();
     $("#botao-reiniciar").attr("disabled", true);
     var cronometroID = setInterval(function () {
       tempo--;
@@ -49,8 +49,8 @@ function inicializaTimer() {
 }
 
 function inicializaMarcadores() {
-  var frase = $(".frase").text();
   campo.on("input", function () {
+    var frase = $(".frase").text();
     var digitado = campo.val();
     var comparavel = frase.substr(0, digitado.length);
     if (digitado == comparavel) {
@@ -81,5 +81,3 @@ function reiniciaJogo() {
   campo.removeClass("campo-certo");
   campo.removeClass("campo-errado");
 }
-
-
