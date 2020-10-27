@@ -40,3 +40,8 @@ body {
 #spinner {
   display: none;
 }
+
+#frase-id {
+  margin-left: 10px;
+  width: 30px;
+}
