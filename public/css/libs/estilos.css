@@ -1,0 +1,33 @@
+body {
+  overflow: scroll;
+}
+
+.campo-digitacao {
+  font-size: 20px;
+  height: 130px;
+  /*border: 1px solid black;*/
+}
+
+.campo-errado {
+  border: 3px solid red;
+}
+
+.campo-certo {
+  border: 3px solid green;
+}
+
+.campo-desativado {
+  background: lightgray;
+}
+.frase {
+  font-size: 20px;
+  text-align: left;
+}
+
+.icones {
+  vertical-align: middle;
+}
+
+.placar {
+  display: none;
+}
