@@ -9,6 +9,12 @@ $(document).ready(function () {
   $("#botao-reiniciar").click(reiniciaJogo);
 });
 
+function atualizaTempoInicial(tempo) {
+  tempoInicial = tempo;
+  $('#timer').text(tempo);
+  
+}
+
 function atualizaTamanhoFrase() {
   var frase = $(".frase").text(); // $ = atalho para jQuery .text() sem parametros 'pega' as palavras
   var numPalavras = frase.split(" ").length;
