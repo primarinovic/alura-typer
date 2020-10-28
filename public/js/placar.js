@@ -23,7 +23,7 @@ function novaLinha(usuario, numPalavras) {
   
   function inserePlacar() {
     var corpoTabela = $(".placar").find("tbody");
-    var usuario = "Novo Usuário";
+    var usuario = $('#usuarios').val();
     var numPalavras = $("#contador-palavras").text();
   
     var linha = novaLinha(usuario, numPalavras);
