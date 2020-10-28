@@ -7,6 +7,7 @@ $(document).ready(function () {
   inicializaTimer();
   inicializaMarcadores();
   $("#botao-reiniciar").click(reiniciaJogo);
+  atualizaPlacar();
 });
 
 function atualizaTempoInicial(tempo) {

@@ -49,7 +49,7 @@ function novaLinha(usuario, numPalavras) {
     linha.fadeOut(1000);
     setTimeout(function(){
       linha.remove(); 
-    }, 1000)
+    }, 1000);
     
   }
 
@@ -78,4 +78,16 @@ function novaLinha(usuario, numPalavras) {
     $.post('http://localhost:3000/placar', dados, function(){
       console.log('Salvando o placar no servidor');
     } );
+  }
+
+  function atualizaPlacar() {
+    $.get('http://localhost:3000/placar', function(data){
+
+      $(data).each(function(){
+        var linha = novaLinha(this.usuario, this.pontos);
+        linha.find('.botao-remover').click(removeLinha);
+        $('tbody').append(linha);
+      });
+
+    });
   }
