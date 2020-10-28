@@ -8,10 +8,15 @@ $(document).ready(function () {
   inicializaMarcadores();
   $("#botao-reiniciar").click(reiniciaJogo);
   atualizaPlacar();
+
   $('#usuarios').selectize({
     create: true,
     sortField: 'text'
-});
+  });
+
+  $(".tooltip").tooltipster({
+    trigger: 'custom'
+  });
 });
 
 function atualizaTempoInicial(tempo) {
@@ -37,7 +42,7 @@ function inicializaContadores() {
 }
 
 function inicializaTimer() {
-  
+
   campo.one("focus", function () {
     // função one funciona como o on mas apenas 1x, não fica escutando indefinidamente
     var tempo = $("#timer").text();
